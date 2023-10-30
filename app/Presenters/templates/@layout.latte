@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Sample page to demonstrate CRUD application in Nette PHP Framework.">
+
+    <!-- Materialize -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"/>
+    <link rel="stylesheet" href="materialize/sass/materialize.css">
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>{ifset title}{include title|stripHtml} | {/ifset}SRP</title>
+</head>
+
+<body>
+<nav id="navbar">
+    <div class="nav-wrapper">
+        <a href="#" class="brand-logo left">SRP</a>
+        <ul class="right">
+            <li><a href="#"><b>Odhlásit</b> (admin)</a></li>
+        </ul>
+    </div>
+</nav>
+
+<nav id="second-navbar">
+    <div class="nav-wrapper">
+        <ul>
+            <li><a href="#"><i class="material-icons">arrow_back</i><span>{include second-navbar-title}</span></a></li>
+        </ul>
+    </div>
+</nav>
+
+<ul id="sidebar" class="sidenav sidenav-fixed">
+    <li><a href="#"><i class="material-icons">menu</i></a></li>
+    <li><a href="#"><i class="material-icons">dashboard</i></a></li>
+    <li><a href="#"><i class="material-icons">group</i></a></li>
+    <li><a href="#"><i class="material-icons">new_releases</i></a></li>
+    <li><a href="#"><i class="material-icons">sell</i></a></li>
+</ul>
+
+<main class="content-fill">
+    <div>
+        {include content}
+    </div>
+</main>
+
+<footer class="page-footer">
+</footer>
+
+<!-- Materialize -->
+<script src="materialize/js/bin/materialize.min.js"></script>
+
+<!-- Http client -->
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+<!-- Utils -->
+<script src="js/utils.js"></script>
+
+<!-- Toasts -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="js/toasts.js"></script>
+
+<!-- Initialize modal triggers -->
+<script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function () {
+        M.Modal.init(document.querySelectorAll('.modal'), {});
+    });
+</script>
+
+{include scripts}
+</body>
+</html>

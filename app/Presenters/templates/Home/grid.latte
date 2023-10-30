@@ -1,0 +1,81 @@
+{varType array $brands}
+{varType int $page}
+{varType int $pages}
+{varType string $order}
+{varType int $limit}
+
+<table class="responsive-table">
+    <thead>
+    <tr>
+        <th class="wrapper-valign">Název
+            <span class="actions">
+                <a n:href="Home:Default, order: 'asc', limit: $limit" class="{$order == 'asc' ? active}">
+                    <i class="material-icons">arrow_upward</i>
+                </a>
+                <a n:href="Home:Default, order: 'desc', limit: $limit" class="{$order == 'desc' ? active}">
+                    <i class="material-icons">arrow_downward</i>
+                </a>
+            </span>
+        </th>
+        <th>Akce</th>
+    </tr>
+    </thead>
+    <tbody>
+    {foreach $brands as $brand}
+        {varType App\Domain\Brand $brand}
+        <tr>
+            <td>{$brand->getName()}</td>
+            <td>
+                <a href="#" onclick='handleDelete({$brand->getId()}); return false;'>Smazat</a>
+                <a href="#" onclick='openUpdateFormModal({$brand->toJson()})'>Editovat</a>
+            </td>
+        </tr>
+    {/foreach}
+    </tbody>
+</table>
+
+<div id="paging" class="right-align">
+    <div>
+        {var $dotsLeftDisplayed = false, $dotsRightDisplayed = false}
+        {if $page > 1}
+            <span class="wrapper hover ">
+                <a n:href="Home:Default, order: $order, page: $page - 1, limit: $limit">
+                    <span class="material-symbols-outlined icon">chevron_left</span>
+                </a>
+            </span>
+        {/if}
+        {for $i = 1; $i <= $pages; $i++}
+            {if $i <= 5 || $i == $pages}
+                <span class="wrapper hover {$page == $i ? active}">
+                    <a n:href="Home:Default, order: $order, page: $i, limit: $limit">{$i}</a>
+                </span>
+
+            {elseif $page > $i && !$dotsLeftDisplayed}
+            {do $dotsLeftDisplayed = true}
+                <span class="wrapper">...</span>
+
+            {elseif $page == $i && $page > 5}
+                <span class="wrapper hover {$page == $i ? active}">
+                    <a n:href="Home:Default, order: $order, page: $i, limit: $limit">{$i}</a>
+                </span>
+
+            {elseif $page < $i && !$dotsRightDisplayed}
+            {do $dotsRightDisplayed = true}
+                <span class="wrapper">...</span>
+            {/if}
+
+        {/for}
+        {if $page < $pages}
+            <span class="wrapper hover ">
+                <a n:href="Home:Default, order: $order, page: $page + 1, limit: $limit">
+                    <span class="material-symbols-outlined icon">chevron_right</span>
+                </a>
+            </span>
+        {/if}
+    </div>
+    <div>
+        <span class="wrapper hover"><a n:href="Home:Default, order: $order, page: 1, limit: 10" class="{$limit == 10 ? active}">10</a></span>
+        <span class="wrapper hover"><a n:href="Home:Default, order: $order, page: 1, limit: 20" class="{$limit == 20 ? active}">20</a></span>
+        <span class="wrapper hover"><a n:href="Home:Default, order: $order, page: 1, limit: 30" class="{$limit == 30 ? active}">30</a></span>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+parameters:
+    doctrine:
+        host: 127.0.0.1
+        user: root
+        password: root
+        dbname: SRP
+
+database:
+	dsn: 'mysql:host=127.0.0.1;dbname=SRP'
+	user: 'root'
+	password: 'root'
+
+includes:
+    - doctrine.neon

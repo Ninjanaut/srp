@@ -1,0 +1,134 @@
+body {
+  background-color: #EEEEEE;
+}
+
+.brand-logo {
+  margin-left: 100px;
+}
+
+#navbar {
+  background-color: #1565C0;
+}
+
+#sidebar {
+  max-width: 85px;
+  background-color: #1565C0;
+}
+#sidebar i {
+  color: #FFFFFF;
+}
+
+#second-navbar {
+  background-color: #098BE0;
+}
+#second-navbar i {
+  float: left;
+}
+#second-navbar span {
+  margin-left: 12px;
+  font-size: 1.4em;
+}
+#second-navbar ul {
+  margin-left: 85px;
+}
+
+main {
+  background-color: #FFFFFF;
+  margin-right: 15px;
+  margin-left: 100px;
+  margin-top: 15px;
+}
+
+main > div:first-of-type {
+  padding: 20px;
+}
+
+.page-footer {
+  background-color: #E0E0E0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+.btn-action {
+  text-transform: uppercase;
+}
+
+.btn-primary {
+  background-color: #098BE0;
+}
+.btn-primary:hover {
+  background-color: #1565C0;
+}
+
+table {
+  border: 1px solid #E7E7E7;
+}
+table th {
+  color: #9D9FA0;
+  background-color: #F5F5F5;
+}
+table th .actions {
+  vertical-align: middle;
+}
+table th .active {
+  color: #098BE0;
+}
+table th a {
+  color: #9D9FA0;
+}
+table th a:first-of-type {
+  margin-left: 3px;
+}
+table tr th:last-child {
+  text-align: right;
+}
+table tr td:last-child {
+  text-align: right;
+}
+table a {
+  color: #888;
+}
+table a:hover {
+  color: #098BE0;
+}
+
+#paging {
+  margin-top: 5px;
+  font-size: larger;
+}
+#paging a {
+  color: black;
+}
+#paging .wrapper {
+  display: inline-block;
+  padding-left: 6px;
+  padding-right: 6px;
+  border-bottom: 2px solid transparent;
+}
+#paging .hover:hover {
+  border-bottom: 2px solid #098BE0;
+}
+#paging .active {
+  border-bottom: 2px solid #098BE0;
+}
+#paging .icon {
+  color: #098BE0;
+  vertical-align: bottom;
+}
+
+#add-brand-button {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.unclickable {
+  pointer-events: none;
+}/*# sourceMappingURL=style.css.map */

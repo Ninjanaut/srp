@@ -1,0 +1,139 @@
+// Theme colors
+$color-primary: #1565C0
+$color-secondary: #098BE0
+$color-foreground: #FFFFFF
+$color-background: #EEEEEE
+$color-footer: #E0E0E0
+$color-icons: #FFFFFF
+
+// Grid colors
+$grid-border-color: #E7E7E7
+$grid-th-color: #9D9FA0
+$grid-th-background-color: #F5F5F5
+$grid-th-a-color: #9D9FA0
+$grid-a-color: #888
+
+// Layout
+$sidebar-width: 85px
+$main-margin: 15px
+
+body
+  background-color: $color-background
+
+.brand-logo
+  margin-left: $sidebar-width + 15
+
+#navbar
+  background-color: $color-primary
+
+#sidebar
+  max-width: $sidebar-width
+  background-color: $color-primary
+
+  i
+    color: $color-icons
+
+#second-navbar
+  background-color: $color-secondary
+
+  i
+    float: left
+
+  span
+    margin-left: 12px
+    font-size: 1.4em
+
+  ul
+    margin-left: $sidebar-width
+
+main
+  background-color: $color-foreground
+  margin-right: $main-margin
+  margin-left: $sidebar-width + $main-margin
+  margin-top: $main-margin
+
+main > div:first-of-type
+  padding: 20px
+
+.page-footer
+  background-color: $color-footer
+
+// Set main section to full height
+body
+  display: flex
+  flex-direction: column
+  min-height: 100vh
+
+main
+  flex: 1
+
+.btn-action
+  text-transform: uppercase
+
+.btn-primary
+  background-color: $color-secondary
+
+  &:hover
+    background-color: $color-primary
+
+table
+  border: 1px solid $grid-border-color
+
+  th
+    color: $grid-th-color
+    background-color: $grid-th-background-color
+
+    .actions
+      vertical-align: middle
+
+    .active
+      color: $color-secondary
+
+    a
+      color: $grid-th-a-color
+
+    a:first-of-type
+      margin-left: 3px
+
+  tr
+    th:last-child
+      text-align: right
+
+    td:last-child
+      text-align: right
+
+  a
+    color: $grid-a-color
+
+  a:hover
+    color: $color-secondary
+
+#paging
+  margin-top: 5px
+  font-size: larger
+
+  a
+    color: black
+
+  .wrapper
+    display: inline-block
+    padding-left: 6px
+    padding-right: 6px
+    border-bottom: 2px solid transparent
+
+  .hover:hover
+    border-bottom: 2px solid $color-secondary
+
+  .active
+    border-bottom: 2px solid $color-secondary
+
+  .icon
+    color: $color-secondary
+    vertical-align: bottom
+
+#add-brand-button
+  margin-left: 20px
+  margin-bottom: 20px
+
+.unclickable
+  pointer-events: none

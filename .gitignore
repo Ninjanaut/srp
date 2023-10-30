@@ -1,0 +1,5 @@
+# Normally the local.neon file should be ignored to prevent sensitive data leakage.
+# config/local.neon
+
+# Ignore composer php dependencies.
+/vendor
