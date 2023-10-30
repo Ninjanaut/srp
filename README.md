@@ -18,7 +18,6 @@ This is a sample demo application to demonstrate Nette PHP Framework with Materi
   - Enable [pdo_mysql](https://www.php.net/manual/en/ref.pdo-mysql.php) extension
   - On Windows, only uncomment the following line in `php.ini`
 
-
     	extension=pdo_mysql
 
 - Install [Composer](https://getcomposer.org/download/)
@@ -26,7 +25,6 @@ This is a sample demo application to demonstrate Nette PHP Framework with Materi
   - Or (recommended) use Docker engine and run MySQL server as Docker container. 
   - Run the following command (more information [here](https://hub.docker.com/_/mysql))
   
-
     	docker run --name mysql -e MYSQL_ROOT_PASSWORD=root -p 3306:3306 -d mysql
 
 
@@ -37,13 +35,11 @@ This is a sample demo application to demonstrate Nette PHP Framework with Materi
     * You can access it via `/adminer.php` url address when the web server will be running
 * Update dependencies with the following command in the project root directory 
 
-
     	compose install
 
 * Run web server with the following command in the project root directory
 
-
-	php -S localhost:8000 -t www
+		php -S localhost:8000 -t www
 
 Then visit `http://localhost:8000` in your browser to see the home page.
 
@@ -55,8 +51,7 @@ You can run unit tests with the following command
 
 ## Static Code Analysis
 
+Ensure that web server is running.
 You can check the code for errors using the following command
-* Ensure that web server is running
 
-
-    vendor\bin\phpstan analyse app
+	vendor\bin\phpstan analyse app
