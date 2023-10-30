@@ -19,7 +19,7 @@ This is a sample demo application to demonstrate Nette PHP Framework with Materi
   - On Windows, only uncomment the following line in `php.ini`
 
 
-    extension=pdo_mysql
+    	extension=pdo_mysql
 
 - Install [Composer](https://getcomposer.org/download/)
 - Install [MySQL](https://www.mysql.com/downloads/)
@@ -27,7 +27,7 @@ This is a sample demo application to demonstrate Nette PHP Framework with Materi
   - Run the following command (more information [here](https://hub.docker.com/_/mysql))
   
 
-    docker run --name mysql -e MYSQL_ROOT_PASSWORD=root -p 3306:3306 -d mysql
+    	docker run --name mysql -e MYSQL_ROOT_PASSWORD=root -p 3306:3306 -d mysql
 
 
 * Check `app\config\local.neon` file configuration to match your database connection credentials.
@@ -38,7 +38,7 @@ This is a sample demo application to demonstrate Nette PHP Framework with Materi
 * Update dependencies with the following command in the project root directory 
 
 
-    compose install
+    	compose install
 
 * Run web server with the following command in the project root directory
 
