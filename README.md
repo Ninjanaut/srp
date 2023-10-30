@@ -29,6 +29,14 @@ This is a sample demo application to demonstrate Nette PHP Framework with Materi
 
 
 * Check `app\config\local.neon` file configuration to match your database connection credentials.
+* If using Linux, please update the `app\config\doctrine.neon` file and rotate the slashes
+
+```
+	nettrine.orm.attributes:
+    		mapping:
+        		App/Domain: %appDir%/Domain
+```
+  
 * Run `seed.sql` file against the database. 
   * You can use any MySQL database client, for example the official one [MySQL Workbench](https://www.mysql.com/products/workbench/)
   * There is also an [adminer](https://www.adminer.org/) web client attached in the project
