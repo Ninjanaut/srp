@@ -35,7 +35,7 @@ This is a sample demo application to demonstrate Nette PHP Framework with Materi
     * You can access it via `/adminer.php` url address when the web server will be running
 * Update dependencies with the following command in the project root directory 
 
-    	compose install
+    	composer install
 
 * Run web server with the following command in the project root directory
 
