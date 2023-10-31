@@ -3,3 +3,6 @@
 
 # Ignore composer php dependencies.
 /vendor
+
+# Ignore PhpStorm IDE folder.
+/.idea
